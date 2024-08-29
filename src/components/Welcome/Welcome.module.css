@@ -3,5 +3,6 @@
 }
 
 .content {
-    /* background-color: rgba(229,212,230,255); */
+    background-color: rgb(255, 255, 255);
+    @apply rounded-xl shadow-xl overflow-hidden my-auto py-4 px-4 animate-fade-up animate-once animate-duration-[1200ms] animate-delay-200
 }

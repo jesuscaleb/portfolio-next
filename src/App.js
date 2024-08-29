@@ -1,13 +1,12 @@
 import './App.css';
+import Portfolio from './components/Portfolio/Portfolio';
 import Welcome from './components/Welcome/Welcome';
 
 function App() {
   return (
     <div className="App">
-      <Welcome>
-        <header className="App-header">
-        </header>
-      </Welcome>
+      <Welcome></Welcome>
+      <Portfolio></Portfolio>
     </div>
   );
 }

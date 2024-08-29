@@ -1,0 +1,12 @@
+.layout {
+    background-color: rgb(255, 255, 255);
+}
+
+.content {
+    background-color: rgb(255, 255, 255);
+    @apply my-auto py-4 px-4
+}
+
+.title {
+    @apply animate-fade animate-once
+}
