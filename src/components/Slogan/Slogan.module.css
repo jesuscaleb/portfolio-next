@@ -1,0 +1,24 @@
+.layout {
+    background-image: url('assets/img/grid.webp');
+    background-size: cover;
+    background-color: rgb(105, 25, 255);
+    background-position: calc(50% - 14.9701px) calc(50% + 7.49428px);
+    @apply min-h-screen flex flex-col items-center justify-center from-blue-50 to-indigo-100 px-4
+}
+
+.title {
+    color: rgb(203, 213, 225);
+    @apply text-4xl md:text-6xl font-bold text-center mb-8
+}
+
+.sloganLayout {
+    @apply flex flex-col sm:flex-row gap-4 mt-8
+}
+
+.primaryButton {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl
+}
+
+.secondaryButton {
+    @apply bg-transparent hover:bg-gray-800 text-gray-800 hover:text-white font-semibold py-3 px-8 rounded-lg border-2 border-gray-800 transform transition-all duration-300 hover:scale-105
+}

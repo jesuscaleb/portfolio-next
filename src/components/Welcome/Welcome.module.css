@@ -1,8 +1,42 @@
 .layout {
-    background-color: rgb(213,203,245);
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.imageSection {
+    flex: 1;
+    background-image: url('assets/img/thatisme.jpg');
+    background-color: rgb(6, 9, 24);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Initial state: Grayscale (black and white) */
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); /* For Safari compatibility */
+    
+    /* Smooth transition effect */
+    transition: filter 0.5s ease-in-out; 
+}
+
+.imageSection:hover {
+  /* Hover state: Full color */
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%); /* For Safari compatibility */
+}
+
+.textSection {
+    flex: 1;
+    background-color: rgb(6, 9, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .content {
-    background-color: rgb(255, 255, 255);
-    @apply rounded-xl shadow-xl overflow-hidden my-auto py-4 px-4 animate-fade-up animate-once animate-duration-[1200ms] animate-delay-200
+    background-color: rgb(6, 9, 24);
+    border: rgb(203, 213, 225) 1px solid;
+    color: rgb(203, 213, 225);
+    @apply rounded-xl shadow-xl overflow-hidden py-4 px-4 animate-fade-up animate-once animate-duration-[1200ms] animate-delay-200
 }
