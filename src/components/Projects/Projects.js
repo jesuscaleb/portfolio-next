@@ -9,49 +9,31 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Neon Commerce",
-      description: "Una plataforma de comercio electrónico de alto rendimiento con panel de administración en tiempo real y análisis de datos integrados.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA5rfNYr3UeNTLwhsVD69Un2cmfjrs23C2pG8WPDTMkraX1k-1rpzmj0pBXd9N3Lj9xRZtFjJQa0xLQSpv-AeKdpsXwQoMNPIf1R-MfjKGGewPBiXH5nRRiMMQib2kDLHN9cT0p82GWEeEujNbW_p1_538dWDtsVlWqPxMes4HOsSyWn8W7ulIdqYI6Jq5gjdc1nEhJ0GvncwxfwMwTP_VCemhitJ_rH33ATEzfptezwiwGeDHF7HGZi6kUGFI30Sm-B2qapta55mCN",
-      year: "2023",
-      techStack: ["React", "Node.js", "MongoDB"],
-      techColors: ["bg-blue-100 text-blue-700", "bg-green-100 text-green-700", "bg-purple-100 text-purple-700"]
+      title: "Material",
+      description: "Un prototipo de seguridad de sesión con uso de tokens y CMS incluido en desarrollo.",
+      image: "/assets/material.png",
+      year: "2021",
+      techStack: ["Angular", "NodeJS", "MongoDB"],
+      techColors: ["bg-red-100 text-red-700", "bg-indigo-100 text-indigo-700", "bg-green-100 text-green-700"]
     },
     {
       id: 2,
-      title: "FinTrack Pro",
-      description: "Aplicación de gestión financiera personal que ayuda a los usuarios a rastrear gastos, establecer presupuestos y visualizar metas de ahorro.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBE6-4cFYui-pGZZcOEMIqdD9B6pXioajp4fZrXehwbBrWCN9_D432faKNKnF9EF8zfoBxF_7-2RRPEVnOkgedToODlXXUPzVIw_3RzIWq0U8lvPCw-D8OLA2BU3UxkE0I3P28ZHTrTikTjDWwqkyHgYJK0cWZSl52O2TXK-ZoSQMxsnCCzWipCs3J3pqoQmsLYoW_C-OjGVDA4zL52WIyjmyQLwJ3MzmvbwU0dj7bldKbY21bKJdzS6HQWISSnpKxCMDqtePBxEy91",
-      year: "2023",
-      techStack: ["Next.js", "TypeScript", "Firebase"],
-      techColors: ["bg-gray-100 text-gray-700", "bg-blue-100 text-blue-700", "bg-yellow-100 text-yellow-700"]
+      title: "MyApi",
+      description: "API REST que proporciona endpoints para gestionar recursos, autenticación y solicitudes CRUD a MyAngular.",
+      image: "/assets/myapi.png",
+      year: "2021",
+      techStack: ["Javascript","Express", "NodeJS"],
+      techColors: ["bg-yellow-100 text-yellow-700", "bg-blue-100 text-blue-700", "bg-indigo-100 text-indigo-700"]
     },
     {
       id: 3,
-      title: "StreamSocial",
-      description: "Panel de control unificado para gestionar múltiples redes sociales, programar publicaciones y analizar métricas de engagement.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUXEdam3FQccWLqfq5p4tdakUL3NkrWO80g1PuDAEOWvKm8udsycxcE8-XLF50U7UGhjXJXZ3azQLiGtZYDWrZLhrHMoTcg0Imel2i8Men6i5KYd8FcszkCs8Jg-s78mK2MaZMgbgORbyJ7WtnLOiTDZ43i1k0Vbi00rtGElNKnIaAxgoC3K0L6S4dAJmpT-GJGGy9z82MT2BaNauwO1U2nGdXARKs9SAO5OBqDRRrB2dfocRoFddPvNKBo9qKHOx50wWGcxTwyEuI",
-      year: "2022",
-      techStack: ["Vue.js", "GraphQL", "Sass"],
-      techColors: ["bg-green-100 text-green-700", "bg-indigo-100 text-indigo-700", "bg-pink-100 text-pink-700"]
-    },
-    {
-      id: 4,
-      title: "Dunno Pro",
-      description: "Aplicación de gestión financiera personal que ayuda a los usuarios a rastrear gastos, establecer presupuestos y visualizar metas de ahorro.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBE6-4cFYui-pGZZcOEMIqdD9B6pXioajp4fZrXehwbBrWCN9_D432faKNKnF9EF8zfoBxF_7-2RRPEVnOkgedToODlXXUPzVIw_3RzIWq0U8lvPCw-D8OLA2BU3UxkE0I3P28ZHTrTikTjDWwqkyHgYJK0cWZSl52O2TXK-ZoSQMxsnCCzWipCs3J3pqoQmsLYoW_C-OjGVDA4zL52WIyjmyQLwJ3MzmvbwU0dj7bldKbY21bKJdzS6HQWISSnpKxCMDqtePBxEy91",
-      year: "2023",
-      techStack: ["Next.js", "TypeScript", "Firebase"],
-      techColors: ["bg-gray-100 text-gray-700", "bg-blue-100 text-blue-700", "bg-yellow-100 text-yellow-700"]
-    },
-    {
-      id: 5,
-      title: "Neon Neon",
-      description: "Una plataforma de comercio electrónico de alto rendimiento con panel de administración en tiempo real y análisis de datos integrados.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA5rfNYr3UeNTLwhsVD69Un2cmfjrs23C2pG8WPDTMkraX1k-1rpzmj0pBXd9N3Lj9xRZtFjJQa0xLQSpv-AeKdpsXwQoMNPIf1R-MfjKGGewPBiXH5nRRiMMQib2kDLHN9cT0p82GWEeEujNbW_p1_538dWDtsVlWqPxMes4HOsSyWn8W7ulIdqYI6Jq5gjdc1nEhJ0GvncwxfwMwTP_VCemhitJ_rH33ATEzfptezwiwGeDHF7HGZi6kUGFI30Sm-B2qapta55mCN",
-      year: "2023",
-      techStack: ["React", "Node.js", "MongoDB"],
-      techColors: ["bg-blue-100 text-blue-700", "bg-green-100 text-green-700", "bg-purple-100 text-purple-700"]
-    },
+      title: "MyAngular",
+      description: "Un blog con funcionalidades CRUD y autenticación, construido con Angular para el frontend y GraphQL para la gestión de datos.",
+      image: "/assets/myangular.png",
+      year: "2021",
+      techStack: ["Angular", "NodeJS", "MongoDB"],
+      techColors: ["bg-red-100 text-red-700", "bg-indigo-100 text-indigo-700", "bg-green-100 text-green-700"]
+    }
   ];
 
   useEffect(() => {

@@ -3,6 +3,7 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Services from './components/Services/Services';
 import Projects from './components/Projects/Projects';
+import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Services />
       <Projects />
+      <ContactForm />
       <Footer />
     </div>
   );
