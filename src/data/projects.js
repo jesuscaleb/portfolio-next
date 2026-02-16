@@ -1,0 +1,80 @@
+export const projects = [
+  {
+    id: 1,
+    title: "Material",
+    description: "Un prototipo de seguridad de sesión con uso de tokens y CMS incluido en desarrollo.",
+    fullDescription: "Una plataforma de seguridad de sesión con autenticación mediante tokens y gestión de contenidos.",
+    image: "/assets/material.png",
+    year: "2021",
+    tags: ["Desarrollo Web", "UI/UX Design"],
+    techStack: [
+      { name: "Angular", icon: "" },
+      { name: "NodeJS", icon: "" },
+      { name: "MongoDB", icon: "" }
+    ],
+    techColors: ["bg-red-100 text-red-700", "bg-indigo-100 text-indigo-700", "bg-green-100 text-green-700"],
+    client: "Personal Project",
+    role: "Full Stack Developer",
+    date: "Octubre 2023",
+    about: "Material es un prototipo de seguridad de sesión que implementa autenticación robusta mediante tokens JWT. El proyecto incluye un sistema de gestión de contenidos (CMS) integrado que permite a los usuarios administrar sus datos de forma segura.",
+    about2: "Desarrollamos una arquitectura basada en Angular para el frontend con una API REST en NodeJS, implementando las mejores prácticas de seguridad incluyendo hash de contraseñas, refresh tokens y protección contra ataques CSRF.",
+    challenge: "Garantizar la seguridad de las sesiones de usuario sin comprometer la experiencia de usuario ni el rendimiento de la aplicación.",
+    solution: "Implementamos un sistema de autenticación con tokens de acceso y refresh, almacenamiento seguro en cookies httpOnly, y rotación de tokens para maximizar la seguridad.",
+    gallery: [],
+    liveUrl: "#",
+    githubUrl: "https://github.com/jesuscaleb/material",
+    testimonial: null
+  },
+  {
+    id: 2,
+    title: "MyApi",
+    description: "API REST que proporciona endpoints para gestionar recursos, autenticación y solicitudes CRUD a MyAngular.",
+    fullDescription: "Una API REST completa y escalable para la gestión de recursos empresariales.",
+    image: "/assets/myapi.png",
+    year: "2021",
+    tags: ["Backend", "API REST"],
+    techStack: [
+      { name: "JavaScript", icon: "" },
+      { name: "Express", icon: "" },
+      { name: "NodeJS", icon: "" }
+    ],
+    techColors: ["bg-yellow-100 text-yellow-700", "bg-blue-100 text-blue-700", "bg-indigo-100 text-indigo-700"],
+    client: "TechCorp",
+    role: "Personal Project",
+    date: "Marzo 2023",
+    about: "MyApi es una API REST robusta diseñada para manejar la gestión de recursos de la aplicación MyAngular.",
+    about2: "Implementamos autenticación JWT, rate limiting, y documentación con Swagger para facilitar la integración.",
+    challenge: "Garantizar la seguridad y rendimiento de endpoints expuestos públicamente.",
+    solution: "Utilizamos Express.js con middleware de seguridad y caché Redis para optimizar las respuestas.",
+    gallery: [],
+    liveUrl: "#",
+    githubUrl: "https://github.com/jesuscaleb/node-api-rest",
+    testimonial: null
+  },
+  {
+    id: 3,
+    title: "MyAngular",
+    description: "Un blog con funcionalidades CRUD y autenticación, construido con Angular para el frontend y GraphQL para la gestión de datos.",
+    fullDescription: "Una plataforma de blogging moderna con autenticación y gestión de contenido.",
+    image: "/assets/myangular.png",
+    year: "2021",
+    tags: ["Frontend", "Angular"],
+    techStack: [
+      { name: "Angular", icon: "" },
+      { name: "NodeJS", icon: "" },
+      { name: "MongoDB", icon: "" }
+    ],
+    techColors: ["bg-red-100 text-red-700", "bg-indigo-100 text-indigo-700", "bg-green-100 text-green-700"],
+    client: "Personal Project",
+    role: "Full Stack Developer",
+    date: "Enero 2023",
+    about: "MyAngular es una aplicación de blogging completa con sistema de autenticación y gestión de artículos.",
+    about2: "Desarrollamos una interfaz de usuario responsive con Angular Material y un backend escalable.",
+    challenge: "Crear una experiencia de usuario fluida con carga rápida y transiciones suaves.",
+    solution: "Utilizamos lazy loading de módulos y optimización de imágenes para mejorar el rendimiento.",
+    gallery: [],
+    liveUrl: "#",
+    githubUrl: "https://github.com/jesuscaleb/myangular",
+    testimonial: null
+  }
+];

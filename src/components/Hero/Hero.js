@@ -1,8 +1,14 @@
 import React from 'react';
 
-const Hero = () => {
+const Hero = ({ onNavigate }) => {
+  const handleNavClick = (sectionId) => {
+    if (onNavigate) {
+      onNavigate(sectionId);
+    }
+  };
+
   return (
-    <header className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#5b21b6]">
+    <header id="home" className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#5b21b6]">
       <div className="absolute inset-0 bg-gradient-to-b from-[#7c3aed] to-[#4c1d95]"></div>
       <div className="absolute inset-0 perspective-container pointer-events-none opacity-40">
         <div className="absolute inset-[-50%] w-[200%] h-[200%] hero-grid grid-plane"></div>
@@ -16,12 +22,12 @@ const Hero = () => {
           Creamos experiencias digitales que definen el futuro. Transformamos ideas en código limpio y diseño impactante.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a className="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-medium shadow-xl shadow-blue-900/20 transition-all hover:-translate-y-1" href="#projects">
+          <button className="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-medium shadow-xl shadow-blue-900/20 transition-all hover:-translate-y-1" onClick={() => handleNavClick('projects')}>
             Descubre nuestro trabajo
-          </a>
-          <a className="bg-purple-900/40 hover:bg-purple-900/60 backdrop-blur-sm border border-purple-400/30 text-white px-8 py-3 rounded-md text-lg font-medium transition-all hover:-translate-y-1" href="#services">
+          </button>
+          <button className="bg-purple-900/40 hover:bg-purple-900/60 backdrop-blur-sm border border-purple-400/30 text-white px-8 py-3 rounded-md text-lg font-medium transition-all hover:-translate-y-1" onClick={() => handleNavClick('services')}>
             Ver Servicios
-          </a>
+          </button>
         </div>
       </div>
       

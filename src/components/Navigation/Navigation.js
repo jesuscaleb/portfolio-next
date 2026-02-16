@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
 
-const Navigation = () => {
+const Navigation = ({ onNavigate }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleNavClick = (sectionId) => {
+    if (onNavigate) {
+      onNavigate(sectionId);
+    }
+  };
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
@@ -46,29 +52,29 @@ const Navigation = () => {
           </div>
           
           <div className="flex-shrink-0 flex items-center hidden md:flex">
-            <a className="text-xl font-bold tracking-tight text-gray-900 dark:text-white" href="#">
+            <button className="text-xl font-bold tracking-tight text-gray-900 dark:text-white" onClick={() => handleNavClick('home')}>
               JCODE<span className="text-primary">LABS</span>
-            </a>
+            </button>
           </div>
           
           <div className="flex-1 flex justify-center">
             <div className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row absolute top-16 left-0 right-0 bg-background-light dark:bg-background-dark md:relative md:top-0 md:bg-transparent md:dark:bg-transparent w-full md:w-auto border-b border-gray-200 dark:border-gray-800 md:border-0`}>
-              <a className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#about">Nosotros</a>
-              <a className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#projects">Proyectos</a>
-              <a className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#services">Servicios</a>
+              <button className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors w-full text-left" onClick={() => handleNavClick('about')}>Nosotros</button>
+              <button className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors w-full text-left" onClick={() => handleNavClick('projects')}>Proyectos</button>
+              <button className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors w-full text-left" onClick={() => handleNavClick('services')}>Servicios</button>
             </div>
             
             <div className="flex md:hidden">
-              <a className="text-lg font-bold text-gray-900 dark:text-white" href="#">
+              <button className="text-lg font-bold text-gray-900 dark:text-white" onClick={() => handleNavClick('home')}>
                 JCODE<span className="text-primary">LABS</span>
-              </a>
+              </button>
             </div>
           </div>
           
           <div className="flex items-center">
-            <a className="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-transform transform hover:scale-105 shadow-lg shadow-blue-500/30" href="#contact">
+            <button className="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-transform transform hover:scale-105 shadow-lg shadow-blue-500/30" onClick={() => handleNavClick('contact')}>
               Hablemos
-            </a>
+            </button>
             <button 
               className="ml-4 text-gray-500 dark:text-gray-400 focus:outline-none" 
               onClick={toggleDarkMode}

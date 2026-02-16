@@ -1,40 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { projects } from '../../data/projects';
 
-const Projects = () => {
+const Projects = ({ onProjectSelect }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [cardWidth, setCardWidth] = useState(0);
   const trackRef = useRef(null);
-
-  const projects = [
-    {
-      id: 1,
-      title: "Material",
-      description: "Un prototipo de seguridad de sesión con uso de tokens y CMS incluido en desarrollo.",
-      image: "/assets/material.png",
-      year: "2021",
-      techStack: ["Angular", "NodeJS", "MongoDB"],
-      techColors: ["bg-red-100 text-red-700", "bg-indigo-100 text-indigo-700", "bg-green-100 text-green-700"]
-    },
-    {
-      id: 2,
-      title: "MyApi",
-      description: "API REST que proporciona endpoints para gestionar recursos, autenticación y solicitudes CRUD a MyAngular.",
-      image: "/assets/myapi.png",
-      year: "2021",
-      techStack: ["Javascript","Express", "NodeJS"],
-      techColors: ["bg-yellow-100 text-yellow-700", "bg-blue-100 text-blue-700", "bg-indigo-100 text-indigo-700"]
-    },
-    {
-      id: 3,
-      title: "MyAngular",
-      description: "Un blog con funcionalidades CRUD y autenticación, construido con Angular para el frontend y GraphQL para la gestión de datos.",
-      image: "/assets/myangular.png",
-      year: "2021",
-      techStack: ["Angular", "NodeJS", "MongoDB"],
-      techColors: ["bg-red-100 text-red-700", "bg-indigo-100 text-indigo-700", "bg-green-100 text-green-700"]
-    }
-  ];
 
   useEffect(() => {
     const updateCarouselMetrics = () => {
@@ -154,14 +125,14 @@ const Projects = () => {
                           key={index}
                           className={`px-3 py-1 text-xs font-medium rounded-full ${project.techColors[index]}`}
                         >
-                          {tech}
+                          {tech.name}
                         </span>
                       ))}
                     </div>
                   </div>
                   <a
-                    className="inline-flex items-center text-primary font-semibold hover:text-blue-400 dark:hover:text-blue-300 transition group/link"
-                    href="#"
+                    className="inline-flex items-center text-primary font-semibold hover:text-blue-400 dark:hover:text-blue-300 transition group/link cursor-pointer"
+                    onClick={() => onProjectSelect && onProjectSelect(project)}
                   >
                     Ver proyecto
                     <span className="material-icons text-sm ml-1 group-hover/link:translate-x-1 transition-transform">→</span>
