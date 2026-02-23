@@ -58,7 +58,7 @@ const Navigation = ({ onNavigate }) => {
           </div>
           
           <div className="flex-1 flex justify-center">
-            <div className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row absolute top-16 left-0 right-0 bg-background-light dark:bg-background-dark md:relative md:top-0 md:bg-transparent md:dark:bg-transparent w-full md:w-auto border-b border-gray-200 dark:border-gray-800 md:border-0`}>
+            <div className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row absolute top-16 left-0 right-0 bg-background-light dark:bg-background-dark md:relative md:top-0 md:bg-transparent md:dark:bg-transparent w-full md:w-auto max-w-full border-b border-gray-200 dark:border-gray-800 md:border-0 overflow-x-hidden`}>
               <button className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors w-full text-left" onClick={() => handleNavClick('about')}>Nosotros</button>
               <button className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors w-full text-left" onClick={() => handleNavClick('projects')}>Proyectos</button>
               <button className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors w-full text-left" onClick={() => handleNavClick('services')}>Servicios</button>

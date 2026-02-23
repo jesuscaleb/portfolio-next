@@ -8,7 +8,7 @@ const ProjectDetail = ({ project, onBack, allProjects, onProjectSelect, onNaviga
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark pt-20 pb-16">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-secondary/10 dark:bg-secondary/20 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] max-w-[calc(100vw-2rem)] h-[500px] bg-secondary/10 dark:bg-secondary/20 rounded-full blur-[100px] pointer-events-none -z-10"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="flex mb-8">
